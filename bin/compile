@@ -7,7 +7,7 @@ ENV_DIR=${3:-}
 
 echo "------> Generating .profile.d file to generate auth files at startup"
 mkdir -p $BUILD_DIR/.profile.d
-echo "echo ${GOOGLE_BASE_CREDENTIALS@Q} > /app/credentials.json" > $BUILD_DIR/.profile.d/credentials.sh
+echo "echo ${GOOGLE_BASE_CREDENTIALS@Q} > /app-automator/credentials.json" > $BUILD_DIR/.profile.d/credentials.sh
 chmod +x $BUILD_DIR/.profile.d/credentials.sh
-echo "echo ${GOOGLE_SERVICE_ACCOUNT@Q} > /app/service_account.json" > $BUILD_DIR/.profile.d/service_account.sh
+echo "echo ${GOOGLE_SERVICE_ACCOUNT@Q} > /app-automator/service_account.json" > $BUILD_DIR/.profile.d/service_account.sh
 chmod +x $BUILD_DIR/.profile.d/service_account.sh
